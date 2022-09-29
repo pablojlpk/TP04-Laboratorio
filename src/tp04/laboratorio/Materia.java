@@ -8,6 +8,10 @@ public class Materia {
 
     private int anio;
 
+    public Materia() {
+    }
+
+    
     public Materia(int idMateria, String nombre, int anio) {
     }
 
