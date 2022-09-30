@@ -25,6 +25,7 @@ public class Colegio {
     
     private HashSet <Materia> lmateria=new HashSet();
     private HashSet <Alumno> lalumno=new HashSet();
+    
 
     @Override
     public String toString() {
@@ -46,7 +47,7 @@ public class Colegio {
 
         
     public HashSet<Materia> getLmateria() {
-        System.out.println(lmateria);
+    
         return lmateria;
     }
 public void altaAlumno(Alumno a){

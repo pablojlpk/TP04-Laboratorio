@@ -14,12 +14,14 @@ import tp04.laboratorio.Colegio;
  * @author sistema
  */
 public class frAlumno extends javax.swing.JInternalFrame {
-
+private Colegio c;
     /**
      * Creates new form frAlumno
      */
-    public frAlumno() {
+    public frAlumno(Colegio col) {
+        
         initComponents();
+        this.c = col;
     }
 
     /**
@@ -161,7 +163,7 @@ public class frAlumno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txapellidoActionPerformed
 
     private void bguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bguardarActionPerformed
-        Colegio c = new Colegio();
+     
         String v = this.txlegajo.getText();
         Alumno al = new Alumno(Integer.parseInt(this.txlegajo.getText()), this.txapellido.getText(),this.txnombre.getText());
         c.altaAlumno(al);

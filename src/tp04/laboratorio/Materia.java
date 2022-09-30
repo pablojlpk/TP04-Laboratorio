@@ -38,13 +38,9 @@ public class Materia {
         this.anio = anio;
     }
 
-   
-
     @Override
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", Nombre=" + Nombre + ", anio=" + anio + '}';
     }
-
-
 
 }

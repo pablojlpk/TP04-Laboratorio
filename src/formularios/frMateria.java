@@ -16,12 +16,13 @@ import tp04.laboratorio.Materia;
  * @author sistema
  */
 public class frMateria extends javax.swing.JInternalFrame {
-
+private Colegio c;
     /**
      * Creates new form frformulario
      */
-    public frMateria() {
+    public frMateria(Colegio col) {
         initComponents();
+        this.c = col;
     }
 
     /**
@@ -33,8 +34,8 @@ public class frMateria extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btGuardar = new javax.swing.JButton();
+        btSalir = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         lidmat = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -44,17 +45,17 @@ public class frMateria extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        jButton2.setText("Guardar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btGuardar.setText("Guardar");
+        btGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btGuardarActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btSalir.setText("Salir");
+        btSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btSalirActionPerformed(evt);
             }
         });
 
@@ -66,6 +67,11 @@ public class frMateria extends javax.swing.JInternalFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
+        txano.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txanoFocusLost(evt);
+            }
+        });
         txano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txanoActionPerformed(evt);
@@ -129,7 +135,7 @@ public class frMateria extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -137,7 +143,7 @@ public class frMateria extends javax.swing.JInternalFrame {
                         .addContainerGap(211, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btGuardar)
                 .addGap(102, 102, 102))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -164,8 +170,8 @@ public class frMateria extends javax.swing.JInternalFrame {
                             .addComponent(lidmat))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btGuardar)
+                    .addComponent(btSalir))
                 .addGap(20, 20, 20))
         );
 
@@ -180,38 +186,29 @@ public class frMateria extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txanoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        Colegio c = new Colegio();
+    private void btGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGuardarActionPerformed
+        
         boolean esnum = this.txano.getText().matches("[0-9]+");//controlo si el valor ingresado tiene numeros
         if (esnum) {
 
             Materia mat = new Materia(Integer.parseInt(this.lidmat.getText()),
                     this.txnombre.getText(), Integer.parseInt(this.txano.getText()));
+            c.altaMateria(mat);
+            JOptionPane.showMessageDialog(this, "Materia dada de Alta");
+            this.setVisible(false);
 
-            if (c.getLmateria().contains(mat) == false) {
-                System.out.println(c.getLmateria().contains(mat));
-
-//constructor materia : int idMateria, String nombre, int anio) 
-                //System.out.println("materia" + mat);
-                JOptionPane.showMessageDialog(this, "Materia dada de Alta");
-                this.setVisible(true);
-                System.out.println(c.getLmateria());
-            } else {
-                JOptionPane.showMessageDialog(this, "la Materia se encuentra ingresada - Corrobore");
-            }
         } else {
-            JOptionPane.showMessageDialog(this, "el año ingresado es incorrecto!");
+            JOptionPane.showMessageDialog(this, "Debe ingresar nro");
         }
 
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btGuardarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
 
         this.setVisible(false);        // TODO add your handling code here:
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btSalirActionPerformed
 
     private void txnombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txnombreFocusGained
         DateTimeFormatter campo = DateTimeFormatter.ofPattern("yyyyMMddhhmmss");
@@ -221,9 +218,24 @@ public class frMateria extends javax.swing.JInternalFrame {
         this.lidmat.setText("" + codigoal);
 
     }//GEN-LAST:event_txnombreFocusGained
+
+    private void txanoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txanoFocusLost
+      try{
+           Integer.parseInt(this.txano.getText());
+      
+      }catch (Exception error){
+          JOptionPane.showMessageDialog(this, "Ud debe ingresar un nro");
+         this.txano.requestFocus();
+      }
+        
+      
+      
+        
+    }//GEN-LAST:event_txanoFocusLost
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btGuardar;
+    private javax.swing.JButton btSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
