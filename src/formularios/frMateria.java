@@ -181,27 +181,34 @@ public class frMateria extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txanoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        Materia mat;// = new Materia();
-        Colegio c= new Colegio();
-        
+
+        Colegio c = new Colegio();
         boolean esnum = this.txano.getText().matches("[0-9]+");//controlo si el valor ingresado tiene numeros
         if (esnum) {
 
-            //constructor materia : int idMateria, String nombre, int anio) 
-            mat = new Materia(Integer.parseInt(this.lidmat.getText()), this.txnombre.getText(), Integer.parseInt(this.txano.getText()));
-            c.altaMateria(mat);
-            
-            JOptionPane.showMessageDialog(this, "Materia dada de Alta");
+            Materia mat = new Materia(Integer.parseInt(this.lidmat.getText()),
+                    this.txnombre.getText(), Integer.parseInt(this.txano.getText()));
+
+            if (c.getLmateria().contains(mat) == false) {
+                System.out.println(c.getLmateria().contains(mat));
+
+//constructor materia : int idMateria, String nombre, int anio) 
+                //System.out.println("materia" + mat);
+                JOptionPane.showMessageDialog(this, "Materia dada de Alta");
+                this.setVisible(true);
+                System.out.println(c.getLmateria());
+            } else {
+                JOptionPane.showMessageDialog(this, "la Materia se encuentra ingresada - Corrobore");
+            }
         } else {
             JOptionPane.showMessageDialog(this, "el año ingresado es incorrecto!");
-            
         }
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         this.setVisible(false);        // TODO add your handling code here:
 
     }//GEN-LAST:event_jButton1ActionPerformed

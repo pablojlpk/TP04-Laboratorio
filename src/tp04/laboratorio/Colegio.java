@@ -23,9 +23,14 @@ public class Colegio {
     
     
     
-    HashSet <Materia> lmateria=new HashSet();
-      
+    private HashSet <Materia> lmateria=new HashSet();
 
+    
+            
+    public Colegio() {
+    }
+      
+    
       
     public void altaMateria(Materia m) {
         lmateria.add(m);
@@ -33,11 +38,17 @@ public class Colegio {
     }
 
     public HashSet<Materia> getLmateria() {
+        System.out.println(lmateria);
         return lmateria;
     }
 
+    @Override
+    public String toString() {
+        return "Colegio{" + "lmateria=" + lmateria + '}';
+    }
+
  
-    
+   
    
     
 }

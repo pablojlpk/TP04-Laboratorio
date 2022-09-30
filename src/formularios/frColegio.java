@@ -17,6 +17,8 @@ import tp04.laboratorio.Materia;
  */
 public class frColegio extends javax.swing.JFrame {
 
+    
+
     /**
      * Creates new form escritorio2
      */
@@ -197,8 +199,8 @@ public class frColegio extends javax.swing.JFrame {
             }
         });
   
-    
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;

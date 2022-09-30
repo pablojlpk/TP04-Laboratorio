@@ -45,4 +45,10 @@ public class Alumno {
     public int CantidadMaterias() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "mat=" + mat + '}';
+    }
+
 }
