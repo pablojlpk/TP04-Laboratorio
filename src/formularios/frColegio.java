@@ -49,7 +49,7 @@ public class frColegio extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        malta_alum = new javax.swing.JMenuItem();
         salir = new javax.swing.JMenu();
 
         jMenu1.setText("File");
@@ -78,11 +78,11 @@ public class frColegio extends javax.swing.JFrame {
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 747, Short.MAX_VALUE)
+            .addGap(0, 1096, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 351, Short.MAX_VALUE)
+            .addGap(0, 623, Short.MAX_VALUE)
         );
 
         jMenu5.setText("Materia");
@@ -105,13 +105,13 @@ public class frColegio extends javax.swing.JFrame {
 
         jMenu6.setText("Alumno");
 
-        jMenuItem3.setText("Alta Alumno");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        malta_alum.setText("Alta Alumno");
+        malta_alum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                malta_alumActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem3);
+        jMenu6.add(malta_alum);
 
         jMenuBar2.add(jMenu6);
 
@@ -153,13 +153,18 @@ public class frColegio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void malta_alumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_malta_alumActionPerformed
+    frAlumno fal=new frAlumno();
+    
+        escritorio.add(fal);
+        fal.setVisible(true);
+        escritorio.moveToFront(fal);
+        
+    }//GEN-LAST:event_malta_alumActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-        this.setVisible(false);
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_salirActionPerformed
 
     /**
@@ -217,7 +222,7 @@ public class frColegio extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem malta_alum;
     private javax.swing.JMenu salir;
     // End of variables declaration//GEN-END:variables
 }

@@ -24,10 +24,17 @@ public class Colegio {
     
     
     private HashSet <Materia> lmateria=new HashSet();
+    private HashSet <Alumno> lalumno=new HashSet();
 
+    @Override
+    public String toString() {
+        return "Colegio{" + "lmateria=" + lmateria + ", lalumno=" + lalumno + '}';
+    }
+    
     
             
     public Colegio() {
+    this.lmateria=lmateria;
     }
       
     
@@ -37,16 +44,17 @@ public class Colegio {
         
     }
 
+        
     public HashSet<Materia> getLmateria() {
         System.out.println(lmateria);
         return lmateria;
     }
+public void altaAlumno(Alumno a){
+    lalumno.add(a);
+    System.out.println(lalumno);
+}
 
-    @Override
-    public String toString() {
-        return "Colegio{" + "lmateria=" + lmateria + '}';
-    }
-
+  
  
    
    

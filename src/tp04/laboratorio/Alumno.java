@@ -10,34 +10,41 @@ public class Alumno {
 
     private String nombre;
 
-    private HashSet <Materia> mat = new HashSet();
+    private HashSet<Materia> mat = new HashSet();
 
     public Alumno(int legajo, String apellido, String nombre) {
+        this.legajo = legajo;
+        this.apellido = apellido;
+        this.nombre = nombre;
     }
 
     public int getLegajo() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return legajo;
     }
 
-    public int setLegajo(int legajo) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setLegajo(int legajo) {
+        this.legajo = legajo;
     }
 
     public String getApellido() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return apellido;
     }
 
-    public String setApellido(String apellido) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getNombre() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return nombre;
     }
 
-    public String setNombre(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
+
+  
+    
+    
 
     public void agregarMateria(Materia m) {
     }
@@ -48,7 +55,9 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "mat=" + mat + '}';
+        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + '}';
     }
 
+    
+    
 }
