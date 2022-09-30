@@ -43,6 +43,7 @@ private Colegio c;
         jLabel4 = new javax.swing.JLabel();
         bguardar = new javax.swing.JButton();
         bsalir = new javax.swing.JButton();
+        btNuevo = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -112,10 +113,17 @@ private Colegio c;
             }
         });
 
-        bsalir.setText("Salir");
+        bsalir.setText("SALIR");
         bsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bsalirActionPerformed(evt);
+            }
+        });
+
+        btNuevo.setText("NUEVO");
+        btNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btNuevoActionPerformed(evt);
             }
         });
 
@@ -132,6 +140,8 @@ private Colegio c;
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(187, 187, 187))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btNuevo)
+                        .addGap(71, 71, 71)
                         .addComponent(bguardar)
                         .addGap(57, 57, 57)
                         .addComponent(bsalir)
@@ -147,7 +157,8 @@ private Colegio c;
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bguardar)
-                    .addComponent(bsalir))
+                    .addComponent(bsalir)
+                    .addComponent(btNuevo))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -168,15 +179,22 @@ private Colegio c;
         Alumno al = new Alumno(Integer.parseInt(this.txlegajo.getText()), this.txapellido.getText(),this.txnombre.getText());
         c.altaAlumno(al);
         JOptionPane.showMessageDialog(this, "Alumno dado de Alta");
-        this.setVisible(false);
+        
         
                 
     }//GEN-LAST:event_bguardarActionPerformed
+
+    private void btNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNuevoActionPerformed
+        this.txlegajo.setText("");
+        this.txapellido.setText("");
+        this.txnombre.setText("");
+    }//GEN-LAST:event_btNuevoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bguardar;
     private javax.swing.JButton bsalir;
+    private javax.swing.JButton btNuevo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

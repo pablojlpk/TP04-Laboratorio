@@ -42,20 +42,19 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-  
-    
-    
+       
 
     public void agregarMateria(Materia m) {
+        this.mat.add(m);
     }
 
     public int CantidadMaterias() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.mat.size();
     }
 
     @Override
     public String toString() {
-        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + '}';
+        return apellido + " "+ nombre;
     }
 
     

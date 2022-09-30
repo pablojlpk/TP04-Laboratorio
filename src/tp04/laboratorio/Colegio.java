@@ -7,10 +7,7 @@ package tp04.laboratorio;
 
 import java.util.HashSet;
 
-/**
- *
- * @author sistema
- */
+
 public class Colegio {
     
     Materia mat1=new Materia(1,"INGLES PRIMER AÑO",1);
@@ -44,7 +41,11 @@ public class Colegio {
         lmateria.add(m);
         
     }
-
+    
+    public HashSet<Alumno> getLalumno() {
+    
+        return lalumno;
+    }
         
     public HashSet<Materia> getLmateria() {
     
