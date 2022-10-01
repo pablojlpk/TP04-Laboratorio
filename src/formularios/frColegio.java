@@ -33,13 +33,13 @@ public class frColegio extends javax.swing.JFrame {
 
         escritorio = new javax.swing.JDesktopPane();
         jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
+        mmateria = new javax.swing.JMenu();
+        mamateria = new javax.swing.JMenuItem();
+        malumno = new javax.swing.JMenu();
         malta_alum = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        salir = new javax.swing.JMenu();
+        minscripciones = new javax.swing.JMenu();
+        mainscripciones = new javax.swing.JMenuItem();
+        csalir = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,25 +55,25 @@ public class frColegio extends javax.swing.JFrame {
             .addGap(0, 623, Short.MAX_VALUE)
         );
 
-        jMenu5.setText("Materia");
-        jMenu5.addActionListener(new java.awt.event.ActionListener() {
+        mmateria.setText("Materia");
+        mmateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu5ActionPerformed(evt);
+                mmateriaActionPerformed(evt);
             }
         });
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Alta Materia");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        mamateria.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        mamateria.setText("Alta Materia");
+        mamateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                mamateriaActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem2);
+        mmateria.add(mamateria);
 
-        jMenuBar2.add(jMenu5);
+        jMenuBar2.add(mmateria);
 
-        jMenu6.setText("Alumno");
+        malumno.setText("Alumno");
 
         malta_alum.setText("Alta Alumno");
         malta_alum.addActionListener(new java.awt.event.ActionListener() {
@@ -81,26 +81,26 @@ public class frColegio extends javax.swing.JFrame {
                 malta_alumActionPerformed(evt);
             }
         });
-        jMenu6.add(malta_alum);
+        malumno.add(malta_alum);
 
-        jMenuBar2.add(jMenu6);
+        jMenuBar2.add(malumno);
 
-        jMenu7.setText("Inscripción");
+        minscripciones.setText("Inscripción");
 
-        jMenuItem3.setText("Alta Inscripciones");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        mainscripciones.setText("Alta Inscripciones");
+        mainscripciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                mainscripcionesActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem3);
+        minscripciones.add(mainscripciones);
 
-        jMenuBar2.add(jMenu7);
+        jMenuBar2.add(minscripciones);
 
-        salir.setText("Salir");
-        salir.addActionListener(new java.awt.event.ActionListener() {
+        csalir.setText("Salir");
+        csalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salirActionPerformed(evt);
+                csalirActionPerformed(evt);
             }
         });
 
@@ -110,9 +110,9 @@ public class frColegio extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        salir.add(jMenuItem1);
+        csalir.add(jMenuItem1);
 
-        jMenuBar2.add(salir);
+        jMenuBar2.add(csalir);
 
         setJMenuBar(jMenuBar2);
 
@@ -132,12 +132,12 @@ public class frColegio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+    private void mmateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmateriaActionPerformed
 
         // TODO add your handlin        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu5ActionPerformed
+    }//GEN-LAST:event_mmateriaActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void mamateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mamateriaActionPerformed
         frMateria mat = new frMateria(col);
         escritorio.add(mat);
              //codigo para centrar ventana
@@ -148,7 +148,7 @@ public class frColegio extends javax.swing.JFrame {
         
         mat.show();
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_mamateriaActionPerformed
 
     private void malta_alumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_malta_alumActionPerformed
         frAlumno fal = new frAlumno(col);
@@ -165,13 +165,13 @@ public class frColegio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_malta_alumActionPerformed
 
-    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+    private void csalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csalirActionPerformed
 
         
 
-    }//GEN-LAST:event_salirActionPerformed
+    }//GEN-LAST:event_csalirActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void mainscripcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainscripcionesActionPerformed
         fxInscripciones ins=new fxInscripciones(col);
         escritorio.add(ins);
         escritorio.moveToFront(ins);
@@ -184,7 +184,7 @@ public class frColegio extends javax.swing.JFrame {
         ins.setVisible(true);
 
         
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_mainscripcionesActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         this.setVisible(false);        // TODO add your handling code here:
@@ -231,16 +231,16 @@ public class frColegio extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu csalir;
     private javax.swing.JDesktopPane escritorio;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem mainscripciones;
     private javax.swing.JMenuItem malta_alum;
-    private javax.swing.JMenu salir;
+    private javax.swing.JMenu malumno;
+    private javax.swing.JMenuItem mamateria;
+    private javax.swing.JMenu minscripciones;
+    private javax.swing.JMenu mmateria;
     // End of variables declaration//GEN-END:variables
 private Colegio col = new Colegio();
 }

@@ -53,7 +53,7 @@ public class Colegio {
     }
 public void altaAlumno(Alumno a){
     lalumno.add(a);
-    System.out.println(lalumno);
+  
 }
 
   
