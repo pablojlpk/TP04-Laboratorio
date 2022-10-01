@@ -106,6 +106,7 @@ private Colegio c;
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel4.setText("ALTA ALUMNO");
 
+        bguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/check_g.png"))); // NOI18N
         bguardar.setText("GUARDAR");
         bguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +114,7 @@ private Colegio c;
             }
         });
 
+        bsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/exit.png"))); // NOI18N
         bsalir.setText("SALIR");
         bsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +122,7 @@ private Colegio c;
             }
         });
 
+        btNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/nuevo.png"))); // NOI18N
         btNuevo.setText("NUEVO");
         btNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,20 +135,20 @@ private Colegio c;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(83, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel4)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(187, 187, 187))
+                        .addGap(79, 79, 79))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btNuevo)
-                        .addGap(71, 71, 71)
+                        .addGap(18, 18, 18)
                         .addComponent(bguardar)
-                        .addGap(57, 57, 57)
+                        .addGap(18, 18, 18)
                         .addComponent(bsalir)
-                        .addGap(80, 80, 80))))
+                        .addGap(172, 172, 172))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,7 +162,7 @@ private Colegio c;
                     .addComponent(bguardar)
                     .addComponent(bsalir)
                     .addComponent(btNuevo))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

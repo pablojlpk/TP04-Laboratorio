@@ -5,6 +5,7 @@
  */
 package formularios;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
@@ -23,7 +24,7 @@ public class frColegio extends javax.swing.JFrame {
      */
     public frColegio() {
         initComponents();
-    }
+     }
 
     
     @SuppressWarnings("unchecked")
@@ -39,6 +40,7 @@ public class frColegio extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         salir = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,6 +103,15 @@ public class frColegio extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
+
+        jMenuItem1.setText("Confirma que desea salir?");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        salir.add(jMenuItem1);
+
         jMenuBar2.add(salir);
 
         setJMenuBar(jMenuBar2);
@@ -114,7 +125,7 @@ public class frColegio extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(26, 26, 26)
                 .addComponent(escritorio))
         );
 
@@ -129,6 +140,12 @@ public class frColegio extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         frMateria mat = new frMateria(col);
         escritorio.add(mat);
+             //codigo para centrar ventana
+        Dimension tamescritorio = escritorio.getSize();
+        Dimension tamframe = mat.getSize();
+        mat.setLocation((tamescritorio.width - tamframe.width)/2, (tamescritorio.height- tamframe.height)/2);
+        //.------------------
+        
         mat.show();
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -137,6 +154,12 @@ public class frColegio extends javax.swing.JFrame {
         frAlumno fal = new frAlumno(col);
 
         escritorio.add(fal);
+     //codigo para centrar ventana
+        Dimension tamescritorio = escritorio.getSize();
+        Dimension tamframe = fal.getSize();
+        fal.setLocation((tamescritorio.width - tamframe.width)/2, (tamescritorio.height- tamframe.height)/2);
+        //.------------------
+
         fal.setVisible(true);
         escritorio.moveToFront(fal);
 
@@ -144,6 +167,7 @@ public class frColegio extends javax.swing.JFrame {
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
 
+        
 
     }//GEN-LAST:event_salirActionPerformed
 
@@ -151,8 +175,20 @@ public class frColegio extends javax.swing.JFrame {
         fxInscripciones ins=new fxInscripciones(col);
         escritorio.add(ins);
         escritorio.moveToFront(ins);
+        //codigo para centrar ventana
+        Dimension tamescritorio = escritorio.getSize();
+        Dimension tamframe = ins.getSize();
+        ins.setLocation((tamescritorio.width - tamframe.width)/2, (tamescritorio.height- tamframe.height)/2);
+        //.------------------
+        
         ins.setVisible(true);
+
+        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,11 +236,11 @@ public class frColegio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem malta_alum;
     private javax.swing.JMenu salir;
     // End of variables declaration//GEN-END:variables
 private Colegio col = new Colegio();
-
 }
